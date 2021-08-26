@@ -1,0 +1,20 @@
+section.testimonios{
+    background: url(/trabajoPractico1/assets/business-woman.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section.contact{
+    background-color: #E5E5E5;
+}
+img.testimoniales{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
+div.cardTestimonios{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+p.frases{
+    font-size: 1em;
+}
