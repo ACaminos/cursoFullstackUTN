@@ -4,7 +4,9 @@ section.testimonios{
     background-repeat: no-repeat;
 }
 section.contact{
-    background-color: #E5E5E5;
+    background-image: url(/trabajoPractico1/assets/Banner-Contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 img.testimoniales{
     width: 128px;
@@ -17,4 +19,10 @@ div.cardTestimonios{
 }
 p.frases{
     font-size: 1em;
+}
+div.card{
+border-radius: 50px;
+background: #e0e0e0;
+box-shadow: inset 28px 28px 56px #bebebe,
+            inset -28px -28px 56px #ffffff;
 }

@@ -72,49 +72,88 @@
             </div>
         </div>
     </section>
-    <section class="back">
+    <section class="cards pt-4 mb-4">
+      <div class="container">
         <div class="row">
-            <div class="col-4">
-                <h3>Contactenos</h3>
-                <div class="row">
-                  <div class="col-6">
-                    <input type="text" class="form-control form-control-sm" placeholder="Nombre">
-                  </div>
-                  <div class="col-6">
-                    <input type="text" class="form-control form-control-sm" placeholder="Apellido">
-                  </div>
-                </div>
-                <div class="row pt-2">
-                  <div class="col-6">
-                    <input type="text" class="form-control form-control-sm" placeholder="Documento - DNI">
-                  </div>
-                  <div class="col-6">
-                    <input type="email" class="form-control form-control-sm" placeholder="Correo electronico">
-                  </div>
-                </div>
-                <div class="row pt-2">
-                  <div class="col-6">
-                    <input type="text" class="form-control form-control-sm" placeholder="Telefono">
-                  </div>
-                </div>
-                <div class="row pt-2">
-                    <div class="col-12">
-                      <select class="form-select form-select-sm">
-                          <option value="#" selected="true" disabled>Tipo de seguro</option>
-                          <option value="1">Basico</option>
-                          <option value="2">Intermedio</option>
-                          <option value="3">Premium</option>
-                      </select>
-                  </div>
-                </div> 
-            </div>
-            <div class="col-2">
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img src="/trabajoPractico1/assets/siniestros.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img src="/trabajoPractico1/assets/denuncia.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img src="/trabajoPractico1/assets/turnos_online.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      
     </section>
-   <!-- <section class="contact">
-          
-    </section> -->
+    <section class="contact pt-4 pb-5">
+        <div class="row d-flex justify-content-around">
+            <div class="col-md-6">
+                <h3>Contactenos</h3>
+                <form action="#" method="post" name="formContacto">
+                  <div class="row">
+                    <div class="col-6">
+                      <input type="text" class="form-control form-control-sm" placeholder="Nombre">
+                    </div>
+                    <div class="col-6">
+                      <input type="text" class="form-control form-control-sm" placeholder="Apellido">
+                    </div>
+                  </div>
+                  <div class="row pt-2">
+                    <div class="col-6">
+                      <input type="text" class="form-control form-control-sm" placeholder="Documento - DNI">
+                    </div>
+                    <div class="col-6">
+                      <input type="email" class="form-control form-control-sm" placeholder="Correo electronico">
+                    </div>
+                  </div>
+                  <div class="row pt-2">
+                    <div class="col-6">
+                      <input type="text" class="form-control form-control-sm" placeholder="Telefono">
+                    </div>
+                    <div class="col-6">
+                      <select class="form-select form-select-sm" name="tipoSeguros" onchange="mostrarInfo()">
+                          <option value="$500">Basico</option>
+                          <option value="$1000">Intermedio</option>
+                          <option value="$1500">Premium</option>
+                      </select>
+                    </div>
+                  </div><hr>
+                  <div class="row pt-2">
+                        <div class="col-md-6">
+                          <span style="color: white;"><b>Valor del seguro seleccionado:</b></span>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="text" name="" id="valorPlan" disabled style="text-align: center; color: yellow; font-weight: 600;">
+                        </div>
+                  </div>
+                  <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-success btn-sm mt-4" type="button" onclick="">Enviar</button>
+                  </div>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+    </section>
+ <footer></footer>
 </body>
+<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </html>
