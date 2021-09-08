@@ -25,13 +25,13 @@
               </div>
 
               <div class="buttons d-flex justify-content-center mb-4">
-                  <div class="col-md-0">
-                    <button class="button btn btn-primary" onclick="suma()">Suma</button>
-                    <button class="button btn btn-primary" onclick="resta()">Resta</button>
+                  <div class="col-md-0" style="margin-right: 6px;">
+                    <button class="btn btn-primary" id="btnSuma" onclick="suma()">Suma</button>
+                    <button class="btn btn-primary" id="btnResta" onclick="resta()">Resta</button>
                   </div>
                   <div class="col-md-0">
-                    <button class="btn btn-primary" onclick="multi()">Multiplicar</button>
-                    <button class="btn btn-primary" onclick="division()">Division</button>
+                    <button class="btn btn-primary" id="btnMulti" onclick="multi()">Multiplicar</button>
+                    <button class="btn btn-primary" id="btnDiv" onclick="division()">Division</button>
                   </div>
                 </div>
 
@@ -41,9 +41,23 @@
               </div>
 
             </div>
+            <div class="d-grid gap-2 col-6 mx-auto pb-4">
+              <button class="btn btn-success btn-sm" type="button" onclick="enabled()">Reiniciar</button>
+            </div>
           </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script src="script.js"></script>
+<script>
+  document.getElementById("firstNum").addEventListener("input", (e) => {
+    let value = e.target.value;
+    e.target.value = value.replace(/[^A-Z\d-]/g, "");
+  });
+
+  document.getElementById("secondNum").addEventListener("input", (e) => {
+    let value = e.target.value;
+    e.target.value = value.replace(/[^A-Z\d-]/g, "");
+  });
+</script>
 </html>

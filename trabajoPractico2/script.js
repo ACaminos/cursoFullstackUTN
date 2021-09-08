@@ -1,35 +1,54 @@
-firstNum = parseInt(document.getElementById("firstNum").value);
-secondNum = parseInt(document.getElementById("secondNum").value);
-resultado = document.getElementById("resultado");
-btn = document.querySelector(".button");
+function clear(){
+    document.getElementById("firstNum").value = '';
+    document.getElementById("secondNum").value= '';
+    document.getElementById("resultado").value= '';
+}
+function disabled(){
+    document.getElementById("btnSuma").disabled=true;
+    document.getElementById("btnResta").disabled=true;
+    document.getElementById("btnMulti").disabled=true;
+    document.getElementById("btnDiv").disabled=true;
+}
+function enabled(){
+    document.getElementById("btnSuma").disabled=false;
+    document.getElementById("btnResta").disabled=false;
+    document.getElementById("btnMulti").disabled=false;
+    document.getElementById("btnDiv").disabled=false;
+    clear();    
+}
 
 function suma(){
-    result = (firstNum + secondNum);
-    result.value = result;
-    resultado.value = result
-    btn.disabled = true;
+    firstNum = parseInt(document.getElementById("firstNum").value);
+    secondNum = parseInt(document.getElementById("secondNum").value);
+    document.getElementById("resultado").value = firstNum+secondNum;
+    disabled();
 }
 
 function resta(){
-    result = (firstNum - secondNum);
-    result.value = result;
-    resultado.value = result
+    firstNum = parseInt(document.getElementById("firstNum").value);
+    secondNum = parseInt(document.getElementById("secondNum").value);
+    document.getElementById("resultado").value = firstNum-secondNum;
+    disabled();
 }
 
 function multi(){
-    result = (firstNum * secondNum);
-    result.value = result;
-    resultado.value = result
+    firstNum = parseInt(document.getElementById("firstNum").value);
+    secondNum = parseInt(document.getElementById("secondNum").value);
+    document.getElementById("resultado").value = firstNum*secondNum;
+    disabled();
 }
 
 function division(){
+    firstNum = parseInt(document.getElementById("firstNum").value);
+    secondNum = parseInt(document.getElementById("secondNum").value);
     if(secondNum != 0){
         result = (firstNum / secondNum);
-        result.value = result;
-        resultado.value = result
+        document.getElementById("resultado").value = firstNum/secondNum;
+        disabled();
     }
     else{
-        alert('asdads');
+        document.getElementById("resultado").value = "Error, vuelva a intentar"
+        disabled();
     }
 
 }
