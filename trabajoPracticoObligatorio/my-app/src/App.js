@@ -34,6 +34,10 @@ function App() {
           <input type="password" id="confirmPass" size="50"/>
         </div>
 
+        <div className="input">
+          <input type="button" value="Enviar datos"/>
+        </div>
+
       </header>
     </div>
   );
