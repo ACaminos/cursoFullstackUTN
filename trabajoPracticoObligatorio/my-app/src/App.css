@@ -1,0 +1,8 @@
+.App{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+div.input{
+  margin: 20px 0px 0px 10px;
+}
