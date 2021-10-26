@@ -1,0 +1,14 @@
+.card img{
+  justify-content: center;
+  align-self: center;
+}
+.LoadingSpiner{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+body{
+  width: 100%;
+}
