@@ -1,23 +1,24 @@
 import React from "react";
+import Nav from 'react-bootstrap/Nav'
 
 function Footer(){
     return(
         <div className="row">
-            <span className="text-center my-3">Seguinos en nuestras redes sociales</span>
-            <ul className="nav justify-content-center">
-                <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Active</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Link</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Link</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
+            <span className="text-center mt-3">Seguinos en nuestras redes sociales</span>
+            <Nav className="justify-content-center" activeKey="/home">
+                <Nav.Item>
+                    <Nav.Link href="/home"><i className="fab fa-twitter-square"/></Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="link-1">Link</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="link-2">Link</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="link-3">Link</Nav.Link>
+                </Nav.Item>
+            </Nav>
         </div>
     )
 
