@@ -25,7 +25,7 @@ function App() {
                 <Registro/>
               </Route>
 
-              <Route path="/Detalles/:data">
+              <Route path="/producto/:data">
                 <Detalle/>
               </Route>
 

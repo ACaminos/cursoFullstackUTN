@@ -9,13 +9,13 @@ import { useParams } from "react-router";
  */
 
 function Detalle(){
-    const {data} = useParams()
+    const {data, id} = useParams()
     console.log (data)
     return(
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="" />
             <Card.Body>
-                <Card.Title>{data}</Card.Title>
+                <Card.Title>{id}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">Detalles</Card.Subtitle>
                 <Card.Text>
                     <ListGroup className="list-group-flush">
@@ -23,7 +23,7 @@ function Detalle(){
                         <ListGroupItem>Precio Min (24hs) - {data}</ListGroupItem>
                     </ListGroup>
                 </Card.Text>
-                <Card.Header as="h5">Precio actual - {data}</Card.Header>
+                <Card.Header as="h5">Precio actual - {id}</Card.Header>
                 <Button variant="primary">Comprar</Button>
             </Card.Body>
         </Card>
