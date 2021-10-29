@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from "react";
 import "../App.css";
 import Producto from "./producto";
+import { getAll } from "../service/productoservice";
 
 function Card(){
     const [loading, SetLoading] = useState(true);
@@ -11,13 +12,12 @@ function Card(){
 
     useEffect(
         ()=>{
-             fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=12&page=1&sparkline=false&price_change_percentage=1h")
-            .then(res=>res.json())
+             getAll()
             .then(data=>{
-                console.log("data",data)
+                console.log(data.data)
                 if(data){
                     SetLoading(false)
-                    SetCryptos(data)
+                    SetCryptos(data.data)
                 }
             })
         },[]
