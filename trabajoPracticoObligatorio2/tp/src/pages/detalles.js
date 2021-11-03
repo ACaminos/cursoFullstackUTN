@@ -25,21 +25,23 @@ function Detalle(){
     )
 
     return(
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="" />
-            <Card.Body>
-                <Card.Title>{data}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">Detalles</Card.Subtitle>
-                <Card.Text>
-                    <ListGroup className="list-group-flush">
-                        <ListGroupItem>Precio Max (24hs) - {data}</ListGroupItem>
-                        <ListGroupItem>Precio Min (24hs) - {data}</ListGroupItem>
-                    </ListGroup>
-                </Card.Text>
-                <Card.Header as="h5">Precio actual - {data}</Card.Header>
-                <Button variant="primary text-center">Comprar</Button>
-            </Card.Body>
-        </Card>
+        <div className=" text-center mt-4 d-flex justify-content-center">
+            <Card style={{ width: '21rem' }}>
+                <Card.Img variant="top" src="" />
+                <Card.Body>
+                    <Card.Title>{data}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">Detalles</Card.Subtitle>
+                    <Card.Text>
+                        <ListGroup className="list-group-flush">
+                            <ListGroupItem>Precio Max (24hs) - {data}</ListGroupItem>
+                            <ListGroupItem>Precio Min (24hs) - {data}</ListGroupItem>
+                        </ListGroup>
+                    </Card.Text>
+                    <Card.Header as="h5">Precio actual - {data}</Card.Header>
+                    <Button variant="primary text-center mt-3">Comprar</Button>
+                </Card.Body>
+            </Card>
+        </div>
     );
 }
 

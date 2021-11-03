@@ -3,7 +3,7 @@ import React from "react";
 function Login(){
     return(
         <div className="container">
-            <div className="card p-4">
+            <div className="card p-4 mt-4">
                 <div className="mb-3 row">
                     <label for="staticEmail" className="col-sm-4 col-form-label">Ingrese su mail</label>
                         <div className="col-sm-8">
