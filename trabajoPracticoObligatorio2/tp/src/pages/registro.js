@@ -20,17 +20,19 @@ function Registro(){
                     <div className="mb-3 row">
                         <label for="inputPassword" className="col-sm-4 col-form-label text-center">Ingrese su contrasena</label>
                         <div className="col-sm-8">
-                            <input type="password" className="form-control" {...register("password",{required: true})}/>
+                            <input type="password" className="form-control" {...register("password",{required: true, minLength:6})}/>
                         </div>
                     </div>
-                    {errors.password && <span className="text-end pb-3">El campo es obligatorio</span>}
+                        {errors.password?.type==='required' && <span className="text-end pb-3">El campo es obligatorio</span>}
+                        {errors.password?.type==='minLength' && <span className="text-end pb-3">El minimo de caracteres es de 6</span>}
 
                     <div className="mb-3 row">
                         <label for="inputPassword" className="col-sm-4 col-form-label text-center">Ingrese nuevamente su contrasena</label>
                         <div className="col-sm-8">
-                            <input type="password" className="form-control" {...register("confirmPassword", {required: true})}/>
+                            <input type="password" className="form-control" {...register("confirmPassword", {required: true, minLength:6})}/>
                         </div>
-                        {errors.confirmPassword && <span className="text-end">El campo es obligatorio</span>}
+                        {errors.confirmPassword?.type==='required' && <span className="text-end pb-3">El campo es obligatorio</span>}
+                        {errors.confirmPassword?.type==='minLength' && <span className="text-end pb-3">El minimo de caracteres es de 6</span>}
                     </div>
                 </div>
                 
