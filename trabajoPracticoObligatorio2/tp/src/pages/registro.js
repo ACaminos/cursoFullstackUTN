@@ -35,7 +35,6 @@ function Registro(){
                         {errors.confirmPassword?.type==='minLength' && <span className="text-end pb-3">El minimo de caracteres es de 6</span>}
                     </div>
                 </div>
-                
                 <div className="d-grid gap-2 col-6 mx-auto mt-4 mb-4">
                         <button className="btn btn-primary btn-sm" type="submit">Registrarme</button>
                     </div>

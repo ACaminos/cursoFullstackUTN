@@ -31,7 +31,7 @@ function Card(){
     }
     else{
         return(
-                <div className="row">
+                <div className="row d-flex justify-content-center">
                     {cryptos.map(crypto=><Producto data={crypto}/>)}
                 </div>
         )

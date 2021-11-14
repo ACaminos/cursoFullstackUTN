@@ -8,8 +8,8 @@ import {Link} from "react-router-dom";
 function Header(){
     return(
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">CriptoAPI</Navbar.Brand>
+            <Navbar collapseOnSelect expand="lg" bg="black" variant="black" className="px-2">
+                    <Navbar.Brand href="#home">TotheMoon</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
