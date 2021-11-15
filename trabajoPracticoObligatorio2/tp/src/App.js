@@ -15,8 +15,8 @@ function App() {
   return (
     <div>
       <Router>
-        <Header/>
         <Slider/>
+          <Header/>
           <Container>
             <Switch>
               <Route path="/login">
