@@ -1,5 +1,7 @@
 import React from "react";
 import Nav from 'react-bootstrap/Nav'
+import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from "react-icons/fa";
+
 
 function Footer(){
     return(
@@ -10,13 +12,13 @@ function Footer(){
                     <Nav.Link href="/home"><i className="fab fa-twitter-square"/></Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-1">Link</Nav.Link>
+                    <Nav.Link eventKey="link-1"><FaFacebookSquare/></Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-2">Link</Nav.Link>
+                    <Nav.Link eventKey="link-2"><FaTwitterSquare/></Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-3">Link</Nav.Link>
+                    <Nav.Link eventKey="link-3"><FaInstagramSquare/></Nav.Link>
                 </Nav.Item>
             </Nav>
         </div>
