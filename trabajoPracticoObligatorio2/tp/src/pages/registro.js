@@ -28,9 +28,9 @@ function Registro(){
         }
     }
     return(
-        <div className="container">
+        <div className="container d-flex justify-content-center">
              <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="card mt-4 p-4">
+                <div className="card mt-4 p-4" style={{ width: '35rem'}}>
                 <div className="mb-3 row">
                         <label for="staticEmail" className="col-sm-4 col-form-label">Ingrese su nombre</label>
                         <div className="col-sm-8">
@@ -64,18 +64,11 @@ function Registro(){
                         {errors.password?.type==='required' && <span className="text-end pb-3">El campo es obligatorio</span>}
                         {errors.password?.type==='minLength' && <span className="text-end pb-3">El minimo de caracteres es de 6</span>}
 
-                    <div className="mb-3 row">
-                        <label for="inputPassword" className="col-sm-4 col-form-labels">Ingrese nuevamente su contrasena</label>
-                        <div className="col-sm-8">
-                            <input type="password" className="form-control" {...register("confirmPassword", {required: true, minLength:6})}/>
-                        </div>
-                        {errors.confirmPassword?.type==='required' && <span className="text-end pb-3">El campo es obligatorio</span>}
-                        {errors.confirmPassword?.type==='minLength' && <span className="text-end pb-3">El minimo de caracteres es de 6</span>}
-                    </div>
-                </div>
-                <div className="d-grid gap-2 col-6 mx-auto mt-4 mb-4">
+                    <div className="d-grid gap-2 col-6 mx-auto mt-3">
                         <button className="btn btn-primary btn-sm" type="submit">Registrarme</button>
                     </div>
+
+                </div>
             </form>
         </div>
     )

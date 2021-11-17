@@ -5,7 +5,7 @@ import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from "react-icon
 
 function Footer(){
     return(
-        <div className="row">
+        <div className="row py-3">
             <span className="text-center mt-3">Seguinos en nuestras redes sociales</span>
             <Nav className="justify-content-center" activeKey="/home">
                 <Nav.Item>
