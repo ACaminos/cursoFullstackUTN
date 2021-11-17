@@ -2,25 +2,21 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import firebase from "../config/firebase";
 
-
 function Registro(){
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = async (data) =>{
         console.log(data);
         try{
             const responseUser = await firebase.auth.createUserWithEmailAndPassword(data.email, data.password)
-            .then(responseUser=>{
-                console.log(responseUser);
-            })
-            console.log("user",responseUser.user.uid)
+            console.log("user", responseUser.user.uid)
             if(responseUser.user.uid){
                 const document = await firebase.db.collection("usuarios")
                 .add({
                     nombre: data.nombre,
                     apellido: data.apellido,
-                    userID: responseUser.user.uid
+                    userId: responseUser.user.uid
                 })
-                console.log("document", document)
+                console.log("documento", document)
             }
         }
         catch(e){
