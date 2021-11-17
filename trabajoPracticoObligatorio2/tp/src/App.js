@@ -9,7 +9,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Detalle from './pages/detalles';
 import Container from 'react-bootstrap/Container';
-import NotFound from './pages/notFound.';
+import NotFound from './pages/notFound';
 import Slider from './components/slider';
 function App() {
   return (
