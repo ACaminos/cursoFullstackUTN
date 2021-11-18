@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import swal from "sweetalert";
 import firebase from "../config/firebase";
 
 function Registro(){
@@ -17,6 +18,7 @@ function Registro(){
                     userId: responseUser.user.uid
                 })
                 console.log("documento", document)
+                swal("¡Bienvenido!","Registro exitoso","success")
             }
         }
         catch(e){

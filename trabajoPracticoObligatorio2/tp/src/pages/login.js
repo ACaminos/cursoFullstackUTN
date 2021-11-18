@@ -16,6 +16,7 @@ function Login(){
                 .where("userId", "==", responseUser.user.uid)
                 .get()
                 console.log("userInfo", userInfo.docs[0]?.data())
+                swal("","Login exitoso","success")
             }
         }
         catch(e){
