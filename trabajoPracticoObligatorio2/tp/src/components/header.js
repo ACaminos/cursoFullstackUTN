@@ -9,7 +9,7 @@ function Header(){
     return(
         <div>
             <Navbar collapseOnSelect expand="lg" bg="black" variant="black" className="px-2">
-                    <Navbar.Brand href="#home">TotheMoon</Navbar.Brand>
+                    <Navbar.Brand><Link to='/'>TotheMoon</Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
