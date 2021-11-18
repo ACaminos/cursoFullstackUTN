@@ -1,8 +1,6 @@
 import React from "react";
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import Login from '../pages/login'
-import Registro from '../pages/registro'
 import {Link} from "react-router-dom";
 
 function Header(){
