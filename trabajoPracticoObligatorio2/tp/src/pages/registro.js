@@ -58,7 +58,7 @@ function Registro(){
                     {errors.email && <span className="text-end pb-3">El campo es obligatorio</span>}
 
                     <div className="mb-3 row">
-                        <label for="inputPassword" className="col-sm-4 col-form-label">Ingrese su contrasena</label>
+                        <label for="inputPassword" className="col-sm-4 col-form-label">Ingrese su contraseña</label>
                         <div className="col-sm-8">
                             <input type="password" className="form-control" {...register("password",{required: true, minLength:6})}/>
                         </div>

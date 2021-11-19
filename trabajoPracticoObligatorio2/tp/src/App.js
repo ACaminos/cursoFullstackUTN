@@ -11,6 +11,7 @@ import Detalle from './pages/detalles';
 import Container from 'react-bootstrap/Container';
 import NotFound from './pages/notFound';
 import Slider from './components/slider';
+import CrearMisCriptos from './pages/crearCriptos';
 function App() {
   return (
     <div>
@@ -29,6 +30,10 @@ function App() {
 
               <Route path="/producto/:data">
                 <Detalle/>
+              </Route>
+
+              <Route path="/crearCriptos">
+                <CrearMisCriptos/>
               </Route>
 
               <Route path="/">
