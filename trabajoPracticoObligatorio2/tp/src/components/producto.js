@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 function Producto(props){
     const{data} = props
     return(
-            <div className="card col-md-3 text-center m-3 pt-3">
+            <div className="card col-md-3 text-center m-3 pt-3" style={{backgroundColor: 'black', borderColor: 'darkgoldenrod', borderRadius: '4%', border: '2px solid darkgoldenrod'}}>
                 <img src={data.image} className="card-img-top w-25" alt={data.name}/>
                 <div className="card-body">
                     <h5 className="card-title">{data.name}</h5>

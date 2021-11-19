@@ -1,6 +1,8 @@
 import React from "react";
 import Nav from 'react-bootstrap/Nav'
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from "react-icons/fa";
+import '../assets/dist/css/estiloRow.min.css'
+
 
 
 function Footer(){
