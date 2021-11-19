@@ -31,6 +31,11 @@ function Login(){
                    swal("","Su cuenta fue suspendida temporalmente","warning")
                 )
             }
+            else if(e.code === 'auth/user-not-found'){
+                return(
+                    swal("Error","Su cuenta no se encuentra registrada","error")
+                )
+            }
         }
     }
 
