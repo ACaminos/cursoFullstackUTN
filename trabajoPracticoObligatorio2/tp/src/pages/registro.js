@@ -32,44 +32,43 @@ function Registro(){
     return(
         <div className="container d-flex justify-content-center">
              <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="card mt-4 p-4" style={{ width: '35rem'}}>
-                <div className="mb-3 row">
-                        <label for="staticEmail" className="col-sm-4 col-form-label">Ingrese su nombre</label>
+                <div className="card mt-4 p-4" style={{ width: '35rem', backgroundColor: 'blacK', borderColor: 'darkgoldenrod', border: '1px solid darkgoldenrod'}}>
+                    <div className="mb-3 row">
+                        <label for="staticEmail" className="col-sm-4 col-form-label" style={{color: 'white'}}>Ingrese su nombre</label>
                         <div className="col-sm-8">
-                            <input type="text" className="form-control" {...register("nombre",{required: true})}/>
+                            <input type="text" className="form-control form-control-sm" {...register("nombre",{required: true})}/>
                         </div>
                     </div>
-                    {errors.nombre && <span className="text-end pb-3">El campo es obligatorio</span>}
+                    {errors.nombre && <span className="text-end pb-3" style={{color: 'white'}}>El campo es obligatorio</span>}
 
                     <div className="mb-3 row">
-                        <label for="staticEmail" className="col-sm-4 col-form-label">Ingrese su apellido</label>
+                        <label for="staticEmail" className="col-sm-4 col-form-label" style={{color: 'white'}}>Ingrese su apellido</label>
                         <div className="col-sm-8">
-                            <input type="text" className="form-control" {...register("apellido",{required: true})}/>
+                            <input type="text" className="form-control form-control-sm" {...register("apellido",{required: true})}/>
                         </div>
                     </div>
-                    {errors.apellido && <span className="text-end pb-3">El campo es obligatorio</span>}
+                    {errors.apellido && <span className="text-end pb-3" style={{color: 'white'}}>El campo es obligatorio</span>}
 
                     <div className="mb-3 row">
-                        <label for="staticEmail" className="col-sm-4 col-form-label">Ingrese su mail</label>
+                        <label for="staticEmail" className="col-sm-4 col-form-label" style={{color: 'white'}}>Ingrese su mail</label>
                         <div className="col-sm-8">
-                            <input type="text" className="form-control" {...register("email",{required: true})}/>
+                            <input type="text" className="form-control form-control-sm" {...register("email",{required: true})}/>
                         </div>
                     </div>
-                    {errors.email && <span className="text-end pb-3">El campo es obligatorio</span>}
+                    {errors.email && <span className="text-end pb-3" style={{color: 'white'}}>El campo es obligatorio</span>}
 
                     <div className="mb-3 row">
-                        <label for="inputPassword" className="col-sm-4 col-form-label">Ingrese su contraseña</label>
+                        <label for="inputPassword" className="col-sm-4 col-form-label" style={{color: 'white'}}>Ingrese su contraseña</label>
                         <div className="col-sm-8">
-                            <input type="password" className="form-control" {...register("password",{required: true, minLength:6})}/>
+                            <input type="password" className="form-control form-control-sm" {...register("password",{required: true, minLength:6})}/>
                         </div>
                     </div>
-                        {errors.password?.type==='required' && <span className="text-end pb-3">El campo es obligatorio</span>}
-                        {errors.password?.type==='minLength' && <span className="text-end pb-3">El minimo de caracteres es de 6</span>}
+                        {errors.password?.type==='required' && <span className="text-end pb-3" style={{color: 'white'}}>El campo es obligatorio</span>}
+                        {errors.password?.type==='minLength' && <span className="text-end pb-3" style={{color: 'white'}}>El minimo de caracteres es de 6</span>}
 
-                    <div className="d-grid gap-2 col-6 mx-auto mt-3">
+                    <div className="d-grid gap-2 col-6 mx-auto mt-2">
                         <button className="btn btn-primary btn-sm" type="submit">Registrarme</button>
                     </div>
-
                 </div>
             </form>
         </div>
