@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useForm } from "react-hook-form";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import firebase from "../config/firebase";
+import firebase from "../../config/firebase";
 import swal from "sweetalert";
 
 function CrearMisCriptos(){

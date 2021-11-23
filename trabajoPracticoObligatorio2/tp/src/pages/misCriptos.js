@@ -36,7 +36,7 @@ function MisCriptos(){
     else{
         return(
             <div>
-                <span style={{color: 'darkgoldenrod', fontWeight: '500', fontSize: '16pt'}}>Mis Criptos</span>
+                <span style={{color: 'darkgoldenrod', fontWeight: '500', fontSize: '18pt', border: 'white 1px solid'}} className="row d-flex justify-content-center my-3 p-1">Mis Criptos</span>
                 <div className="row d-flex justify-content-center">
                     {misCriptomonedas.map(crypto=><MisCriptosDetail datos={{...crypto.data(), id:crypto.id}}/>)}
                 </div>

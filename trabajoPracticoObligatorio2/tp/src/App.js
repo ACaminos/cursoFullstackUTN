@@ -11,7 +11,7 @@ import Detalle from './pages/detalles';
 import Container from 'react-bootstrap/Container';
 import NotFound from './pages/notFound';
 import Slider from './components/slider';
-import CrearMisCriptos from './pages/crearCriptos';
+import CrearMisCriptos from './pages/ABMcriptos/crearCriptos';
 import MisCriptos from './pages/misCriptos';
 function App() {
   return (
