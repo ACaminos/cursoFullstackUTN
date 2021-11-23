@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAI,AAAA,IAAI,CAAA;EACJ,aAAa,CAAA,KAAC;EACd,aAAa,CAAA,EAAC;EACd,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,6BAA6B;EACzC,YAAY,EAAE,8BAA8B;EAC5C,WAAW,EAAE,8BAA8B;CAC1C;;AAED,AAAA,WAAW,CAAC,cAAc,CAAA;EACtB,gBAAgB,EAAE,gBAAgB;CACrC",
+    "sources": [
+        "../trabajoPracticoObligatorio2/tp/src/assets/estiloRow.scss"
+    ],
+    "names": [],
+    "file": "estiloRow.css"
+}

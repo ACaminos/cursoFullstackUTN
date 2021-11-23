@@ -12,6 +12,7 @@ import Container from 'react-bootstrap/Container';
 import NotFound from './pages/notFound';
 import Slider from './components/slider';
 import CrearMisCriptos from './pages/crearCriptos';
+import MisCriptos from './pages/misCriptos';
 function App() {
   return (
     <div>
@@ -34,6 +35,10 @@ function App() {
 
               <Route path="/crearCriptos">
                 <CrearMisCriptos/>
+              </Route>
+
+              <Route path="/misCriptos">
+                <MisCriptos/>
               </Route>
 
               <Route path="/">

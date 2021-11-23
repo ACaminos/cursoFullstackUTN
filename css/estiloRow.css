@@ -10,8 +10,8 @@
   margin-right: calc(-.5 * var(--bs-gutter-x));
   margin-left: calc(-.5 * var(--bs-gutter-x));
 }
-/*# sourceMappingURL=estiloRow.css.map */
 
-.navbar-nav .dropdown-menu{
-  background-color: black;
+.navbar-nav .dropdown-menu {
+  background-color: black !important;
 }
+/*# sourceMappingURL=estiloRow.css.map */

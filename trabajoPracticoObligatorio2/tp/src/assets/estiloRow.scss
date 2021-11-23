@@ -7,3 +7,7 @@
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left: calc(-.5 * var(--bs-gutter-x));
     }
+
+    .navbar-nav .dropdown-menu{
+        background-color: black !important;
+    } 
