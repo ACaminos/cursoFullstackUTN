@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import {Link, useParams} from "react-router-dom";
-import firebase from "../config/firebase"
-import {useForm} from "react-hook-form"
+import {Link, useParams, useHistory} from "react-router-dom";
+import firebase from "../config/firebase";
+import {useForm} from "react-hook-form";
+import swal from "sweetalert";
+
 
 
 function MisCriptosDetail(props){
@@ -12,6 +14,7 @@ function MisCriptosDetail(props){
     console.log(id)
 
     const {setValue } = useForm();
+    const history = useHistory();
 
 
     useEffect(
@@ -43,6 +46,8 @@ function MisCriptosDetail(props){
         const document = await firebase.db.doc("criptomonedas/"+id)
         .delete()
         console.log("Resultado:",id,document)
+        swal("","Su cripto ha sido eliminada exitosamente","success")
+        history.push("/")
         }
         catch(e){
         console.log(e)

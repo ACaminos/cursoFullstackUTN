@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useForm } from "react-hook-form";
 import Form from 'react-bootstrap/Form'
@@ -8,8 +9,9 @@ import swal from "sweetalert";
 
 function CrearMisCriptos(){
     const {register, handleSubmit, formState:{errors} } = useForm();
+    const history = useHistory();
 
-const onSubmit = async(data)=>{
+    const onSubmit = async(data)=>{
 
     console.log("contenido data", data);
     try{
@@ -17,6 +19,8 @@ const onSubmit = async(data)=>{
         .add(data)
         console.log(document)
         swal("","Su criptomoneda a sido creada","success")
+        history.push("/")
+
     }
     catch(e){
         console.log("errores",e)
