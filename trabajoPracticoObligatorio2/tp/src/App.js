@@ -14,6 +14,8 @@ import Slider from './components/slider';
 import CrearMisCriptos from './pages/ABMcriptos/crearCriptos';
 import MisCriptos from './pages/misCriptos';
 import AuthProvider from './context/AuthProvider';
+import AuthContext from './context/AuthContext';
+import context from 'react-bootstrap/esm/AccordionContext';
 function App() {
   return (
     <AuthProvider>
@@ -22,35 +24,45 @@ function App() {
           <Slider/>
             <Header/>
             <Container>
-              <Switch>
-                <Route path="/login">
-                  <Login/>
-                </Route>
+              <AuthContext.Consumer>
+                {
+                  context=>
+                  <Switch>
+                    <Route path="/login">
+                       <Login/>
+                    </Route>
+                
+                    <Route path="/registro">
+                      <Registro/>
+                    </Route>
+                
+                    <Route path="/producto/:data">
+                      <Detalle/>
+                    </Route>
+                    {
+                      context.userLogin &&
+                      <Route path="/crearCriptos">
+                        <CrearMisCriptos/>
+                      </Route>
+                    }
 
-                <Route path="/registro">
-                  <Registro/>
-                </Route>
-
-                <Route path="/producto/:data">
-                  <Detalle/>
-                </Route>
-
-                <Route path="/crearCriptos">
-                  <CrearMisCriptos/>
-                </Route>
-
-                <Route path="/misCriptos">
-                  <MisCriptos/>
-                </Route>
-
-                <Route path="/">
-                  <Home/>
-                </Route>
-
-                <Route path="*">
-                  <NotFound/>
-                </Route>
-              </Switch>
+                    {
+                      context.userLogin &&
+                      <Route path="/misCriptos">
+                        <MisCriptos/>
+                      </Route>
+                    }
+                
+                    <Route path="/">
+                      <Home/>
+                    </Route>
+                
+                    <Route path="*">
+                      <NotFound/>
+                    </Route>
+                  </Switch>
+                }
+              </AuthContext.Consumer>
             </Container>
           <Footer/>
         </Router>

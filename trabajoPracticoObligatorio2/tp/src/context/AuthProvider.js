@@ -2,14 +2,23 @@ import AuthContext from "./AuthContext";
 import React, {useState} from 'react'
 
 function AuthProvider(props){
-    const [userLogin, SetUserLogin] = useState(false)
+    const [userLogin, SetUserLogin] = useState(localStorage.getItem("login"))
 
-    const loginUser = () => {
+    const [userInfo, setUserInfo] = useState(JSON.parse(localStorage.getItem("userInfo")))
+
+    const loginUser = (userInfo) => {
+        localStorage.setItem("login",true)
+        localStorage.setItem("userInfo",JSON.stringify(userInfo))
         SetUserLogin(true)
+        setUserInfo(userInfo)
     }
 
     const logOutUser = () => {
+        localStorage.removeItem("login")
+        localStorage.removeItem("userInfo")
         SetUserLogin(false)
+        setUserInfo({})
+
     }
     
     return(
@@ -17,7 +26,8 @@ function AuthProvider(props){
         value = {{
             userLogin,
             loginUser,
-            logOutUser
+            logOutUser,
+            userInfo
         }}
         >
             {props.children}

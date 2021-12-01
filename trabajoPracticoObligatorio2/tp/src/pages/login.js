@@ -21,7 +21,7 @@ function Login(){
                 console.log("userInfo", userInfo.docs[0]?.data())
                 swal("","Login exitoso","success")
                 history.push("/")
-                context.loginUser()
+                context.loginUser(userInfo.docs[0]?.data())
             }
         }
         catch(e){

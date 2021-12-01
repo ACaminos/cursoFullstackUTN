@@ -27,11 +27,12 @@ function Header(){
                                             <NavDropdown title="Mis criptos" id="basic-nav-dropdown" style={{backgroundColor: 'black', color: 'white'}}>
                                                 <NavDropdown.Item href="/crearCriptos" style={{backgroundColor: 'black', color: 'darkgoldenrod'}}>Crear mi criptomoneda &nbsp; <FaPlusSquare/></NavDropdown.Item>
                                                 <NavDropdown.Item href="/misCriptos" style={{backgroundColor: 'black', color: 'darkgoldenrod'}}>Mis criptomonedas &nbsp; <FaBitcoin/> </NavDropdown.Item>
-                                                <NavDropdown.Divider />
-                                                <NavDropdown.Item onClick={context.logOutUser}>Salir</NavDropdown.Item>
+                                                <NavDropdown.Divider style={{backgroundColor: 'black', color: 'darkgoldenrod'}} />
+                                                <NavDropdown.Item onClick={context.logOutUser} style={{backgroundColor: 'black', color: 'darkgoldenrod'}}>Salir</NavDropdown.Item>
                                             </NavDropdown>
                                         </>
                                     }
+                                </Nav>
 
                                     {
                                         !context.userLogin &&
@@ -42,10 +43,22 @@ function Header(){
                                             </Nav>
                                         </>
                                     }
-                                </Nav>
+                                                                        {
+                                        context.userLogin &&
+                                        <>
+                                            <Nav>
+                                                {
+                                                    context.userInfo &&
+                                                    <div style={{color: "white", fontWeight: "500"}}>Bienvenido/a {context.userInfo.nombre}</div>
+                                                }
+                                            </Nav>
+                                        </>
+                                    }
+                                
 
                             </Navbar.Collapse>
                         </Navbar>
+
                     </>
                 }
             </AuthContext.Consumer>

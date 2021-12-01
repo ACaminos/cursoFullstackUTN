@@ -19,7 +19,7 @@ function CrearMisCriptos(){
         .add(data)
         console.log(document)
         swal("","Su criptomoneda a sido creada","success")
-        history.push("/")
+        history.push("/misCriptos")
 
     }
     catch(e){
