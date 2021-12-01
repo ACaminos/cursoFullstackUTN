@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import firebase from "../config/firebase";
 import swal from 'sweetalert';
-
+import AuthContext from "../context/AuthContext";
+import {useHistory} from "react-router-dom";
 
 function Login(){
     const { register, handleSubmit, formState: {errors} } = useForm();
+    const context = useContext(AuthContext)
+    const history = useHistory();
 
     const onSubmit = async (data) => {
         console.log("data", data);
@@ -17,6 +20,8 @@ function Login(){
                 .get()
                 console.log("userInfo", userInfo.docs[0]?.data())
                 swal("","Login exitoso","success")
+                history.push("/")
+                context.loginUser()
             }
         }
         catch(e){

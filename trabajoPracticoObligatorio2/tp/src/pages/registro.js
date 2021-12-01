@@ -2,9 +2,12 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
 import firebase from "../config/firebase";
+import {useHistory} from "react-router-dom";
+
 
 function Registro(){
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const history = useHistory()
     const onSubmit = async (data) =>{
         console.log(data);
         try{
@@ -19,6 +22,7 @@ function Registro(){
                 })
                 console.log("documento", document)
                 swal("¡Bienvenido!","Registro exitoso","success")
+                history.push("/")
             }
         }
         catch(e){

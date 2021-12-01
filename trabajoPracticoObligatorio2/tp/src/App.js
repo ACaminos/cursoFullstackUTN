@@ -13,46 +13,49 @@ import NotFound from './pages/notFound';
 import Slider from './components/slider';
 import CrearMisCriptos from './pages/ABMcriptos/crearCriptos';
 import MisCriptos from './pages/misCriptos';
+import AuthProvider from './context/AuthProvider';
 function App() {
   return (
-    <div>
-      <Router>
-        <Slider/>
-          <Header/>
-          <Container>
-            <Switch>
-              <Route path="/login">
-                <Login/>
-              </Route>
+    <AuthProvider>
+      <div>
+        <Router>
+          <Slider/>
+            <Header/>
+            <Container>
+              <Switch>
+                <Route path="/login">
+                  <Login/>
+                </Route>
 
-              <Route path="/registro">
-                <Registro/>
-              </Route>
+                <Route path="/registro">
+                  <Registro/>
+                </Route>
 
-              <Route path="/producto/:data">
-                <Detalle/>
-              </Route>
+                <Route path="/producto/:data">
+                  <Detalle/>
+                </Route>
 
-              <Route path="/crearCriptos">
-                <CrearMisCriptos/>
-              </Route>
+                <Route path="/crearCriptos">
+                  <CrearMisCriptos/>
+                </Route>
 
-              <Route path="/misCriptos">
-                <MisCriptos/>
-              </Route>
+                <Route path="/misCriptos">
+                  <MisCriptos/>
+                </Route>
 
-              <Route path="/">
-                <Home/>
-              </Route>
+                <Route path="/">
+                  <Home/>
+                </Route>
 
-              <Route path="*">
-                <NotFound/>
-              </Route>
-            </Switch>
-          </Container>
-        <Footer/>
-      </Router>
-    </div>
+                <Route path="*">
+                  <NotFound/>
+                </Route>
+              </Switch>
+            </Container>
+          <Footer/>
+        </Router>
+      </div>
+    </AuthProvider>
   );
 }
 
