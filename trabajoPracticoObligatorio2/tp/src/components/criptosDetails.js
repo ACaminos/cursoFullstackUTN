@@ -11,7 +11,6 @@ function MisCriptosDetail(props){
     const [detalleCripto,setDetalleCripto] = useState({})
     const [loading,setLoading] = useState(true)
     const {id}=useParams()
-    console.log(id)
 
     const {setValue } = useForm();
     const history = useHistory();

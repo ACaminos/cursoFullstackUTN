@@ -4,6 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import ListGroupItem from 'react-bootstrap/ListGroupItem'
 import Button from 'react-bootstrap/Button'
 import { useParams } from "react-router";
+import {Link} from "react-router-dom"
 import { getById } from "../service/productoservice";
 
 /* import {link} from "react-router-dom";
@@ -38,7 +39,7 @@ function Detalle(){
                         </ListGroup>
                     </Card.Text>
                     <Card.Header as="h5" style={{color: 'white'}}>Precio actual - {data}</Card.Header>
-                    <Button variant="primary text-center mt-3">Comprar</Button>
+                    <Button variant="primary text-center mt-3"><Link to={"/"} style={{textDecoration: 'none'}}><span className="text-white">Volver</span></Link></Button>
                 </Card.Body>
             </Card>
         </div>

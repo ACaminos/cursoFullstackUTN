@@ -10,6 +10,9 @@ import swal from "sweetalert";
 function EditarCripto(){
     const {register, handleSubmit, formState:{errors}, setValue } = useForm();
     const history = useHistory()
+    const {id}=useParams()
+
+    
     const onSubmit = async(data)=>{
 
     console.log("contenido data", data);
@@ -27,7 +30,6 @@ function EditarCripto(){
 
 const [detalleCripto,setDetalleCripto] = useState({})
 const [loading,setLoading] = useState(true)
-const {id}=useParams()
 
 
 useEffect(
