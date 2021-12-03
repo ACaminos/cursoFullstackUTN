@@ -59,7 +59,7 @@ function MisCriptosDetail(props){
             <div className="card-body">
                 <h5 className="card-title my-1" style={{color: 'white'}}>{datos.criptomoneda}</h5>
                 <h5 className="card-title my-3" style={{color: 'white'}}>$ {datos.valor}</h5>
-                <button className="btn btn-primary btn-sm m-3 px-4"><Link to={"#"} style={{textDecoration: 'none'}}><span className="text-white">Editar</span></Link></button>
+                <button className="btn btn-primary btn-sm m-3 px-4"><Link to={"/editCripto"} style={{textDecoration: 'none'}}><span className="text-white">Editar</span></Link></button>
                 <button className="btn btn-danger btn-sm m-3 px-3" onClick={()=>handleDelete(datos.id)} style={{textDecoration: 'none', color: 'white'}}>Eliminar</button>            </div>
         </div>
     )

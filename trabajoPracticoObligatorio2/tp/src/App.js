@@ -15,7 +15,8 @@ import CrearMisCriptos from './pages/ABMcriptos/crearCriptos';
 import MisCriptos from './pages/misCriptos';
 import AuthProvider from './context/AuthProvider';
 import AuthContext from './context/AuthContext';
-import context from 'react-bootstrap/esm/AccordionContext';
+import EditarCripto from './pages/ABMcriptos/editCripto';
+
 function App() {
   return (
     <AuthProvider>
@@ -50,6 +51,13 @@ function App() {
                       context.userLogin &&
                       <Route path="/misCriptos">
                         <MisCriptos/>
+                      </Route>
+                    }
+                    
+                    {
+                      context.userLogin &&
+                      <Route path="/editCripto">
+                        <EditarCripto/>
                       </Route>
                     }
                 
